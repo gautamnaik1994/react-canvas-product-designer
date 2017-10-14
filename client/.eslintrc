@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": "airbnb",
+  "rules":{
+    "import/no-extraneous-dependencies":1,
+    "react/jsx-filename-extension":0
+  }
+}
