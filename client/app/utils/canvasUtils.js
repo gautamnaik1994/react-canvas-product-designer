@@ -29,7 +29,7 @@ export function addShape(shape) {
           height: 50,
           left: 50,
           top: 50,
-          fill: 'rgb(255,0,0)',
+          fill: '#00d1b2',
         }),
       );
       break;
@@ -40,8 +40,7 @@ export function addShape(shape) {
           radius: 40,
           left: 50,
           top: 50,
-          fill: 'rgb(0,255,0)',
-          opacity: 0.5,
+          fill: '#00d1b2',
         }),
       );
       break;
@@ -51,4 +50,17 @@ export function addShape(shape) {
     }
   }
   canvas.renderAll();
+}
+
+export function addText(text) {
+  canvas.add(new fabric.Text(text, { left: 100, top: 100 }));
+  canvas.renderAll();
+}
+
+export function changeColor(color) {
+  if (canvas.getActiveObject() != null) {
+    canvas.getActiveObject().set('fill', color);
+    canvas.renderAll();
+  }
+  return 0;
 }

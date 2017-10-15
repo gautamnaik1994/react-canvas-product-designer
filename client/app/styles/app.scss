@@ -1,7 +1,28 @@
-body {
-   font-family: 'Open Sans';
-}
+@import "~bulma/sass/utilities/initial-variables";
+@import '~bulma/bulma';
+@import './helpers.scss';
+
+
 .canvas-container{
     border: 1px solid #d8d8d8;
     margin: 20px auto;
+}
+.workarea{
+    position: relative;
+}
+.canvas-controls-container{
+    @util position(fixed, null 0 0 0);
+    background-color:slategray; 
+    padding: 15px;
+}
+.object-controls-container{
+    @util position(fixed, 52px 0 80px null);
+    background-color:#f7f7f7; 
+    padding: 15px;
+}
+
+.icon-btn-container{
+    button + button{
+        margin-left: 5px;
+    }
 }

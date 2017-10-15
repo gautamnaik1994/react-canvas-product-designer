@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { fabric } from 'fabric';
-import * as canvasUtils from '../utils/canvasUtils';
+import * as canvasUtils from 'canvasUtils';
 
 class Canvas extends Component {
   componentDidMount() {

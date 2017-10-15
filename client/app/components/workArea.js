@@ -1,11 +1,13 @@
 import React from 'react';
 import Canvas from './canvas';
-import CanvasControls from './canvasControls';
+import CanvasControlsContainer from './canvasControls/canvasControlsContainer';
+import ObjectControlsContainer from './objectControls/objectControlsContainer';
 
 const WorkArea = () => (
-  <div>
+  <div className="workarea">
     <Canvas />
-    <CanvasControls />
+    <ObjectControlsContainer />
+    <CanvasControlsContainer />
   </div>
 );
 export default WorkArea;
