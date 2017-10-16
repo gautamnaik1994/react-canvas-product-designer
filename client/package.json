@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.6.0",
+    "bulma-slider": "0.0.2",
     "fabric": "^1.7.19",
     "react": "^16.0.0",
     "react-color": "^2.13.8",

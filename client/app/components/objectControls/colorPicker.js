@@ -16,6 +16,7 @@ class ColorPicker extends Component {
     render() {
       return (
         <div className="">
+          <p className="bold half-rem-mb">COLOR</p>
           <ChromePicker className="is-shadowless" color={this.state.color} onChangeComplete={this.handleChangeComplete} />
         </div>
       );

@@ -64,3 +64,11 @@ export function changeColor(color) {
   }
   return 0;
 }
+export function changeOpacity(opacity) {
+  if (canvas.getActiveObject() != null) {
+    canvas.getActiveObject().set('opacity', opacity);
+    canvas.renderAll();
+  }
+  return 0;
+}
+
