@@ -144,6 +144,30 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        exclude: /node_modules|fonts|iconfonts/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images/',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(eot|ttf|woff|svg)$/,
+        exclude: /node_modules|images/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      },
       // {
       //   test: /\.(js|jsx)$/,
       //   exclude: /node_modules/,

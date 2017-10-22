@@ -1,29 +1,134 @@
-@import "~bulma/sass/utilities/initial-variables";
+@import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/bulma';
 @import '~bulma-slider/slider';
+@import '~react-rangeslider/lib/index.css';
+@import './icon.scss';
 @import './helpers.scss';
 
+$canvasControlContainerSize: 860px;
+$commomBorderColor: #d8d8d8;
+$sideBarwidth: 300px;
+$smallfont: 0.75rem;
 
-.canvas-container{
-    border: 1px solid #d8d8d8;
-    margin: 20px auto;
-}
-.workarea{
-    position: relative;
-}
-.canvas-controls-container{
-    @util position(fixed, null 0 0 0);
-    background-color:slategray; 
-    padding: 15px;
-}
-.object-controls-container{
-    @util position(fixed, 52px 0 80px null);
-    background-color:#f7f7f7; 
-    padding: 15px;
+.navbar {
+  @util position(fixed, 0 0 null 0);
+  width: 100%;
+  z-index: 10;
+  .navbar-brand img {
+    height: 100%;
+  }
 }
 
-.icon-btn-container{
-    button + button{
-        margin-left: 5px;
+.canvas-container {
+  border: 1px solid $commomBorderColor;
+  margin: 20px auto;
+}
+.workarea {
+  position: relative;
+  padding-top: $navbar-height;
+}
+
+.basic-controls-container {
+  position: fixed;
+  bottom: 70px;
+  width: $canvasControlContainerSize;
+  background-color: white;
+  left: calc((100vw - #{$canvasControlContainerSize}) / 2);
+  padding: 4px;
+  box-shadow: 0 4px 17px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+.object-canvas-controls-container {
+  @util position(fixed, 0 0 0 null);
+  border-left: 1px solid $commomBorderColor;
+  padding: 15px;
+  padding-top: $navbar-height + 1rem;
+  width: $sideBarwidth;
+  background-color: white;
+}
+
+.layer-controls-container {
+  @util position(fixed, 0 null 0 0);
+  border-right: 1px solid $commomBorderColor;
+  padding: 15px;
+  padding-top: $navbar-height + 1rem;
+  width: $sideBarwidth;
+  background-color: white;
+}
+
+.icon-btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+.custom-tabs {
+  width: 180px;
+  display: flex;
+  border: 1px solid #dedede;
+  margin: 0 auto;
+  border-radius: 100px;
+  box-shadow: inset 0 0 11px 0px #dddddd;
+  position: relative;
+  margin-bottom: 1.5rem;
+  font-size: $smallfont;
+  input {
+    display: none;
+  }
+  input[type='radio']:checked + label {
+    color: white;
+  }
+  .c-tab {
+    transition: color 0.3s ease-in-out;
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+    padding: 5px 0px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+  }
+  .mover {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background: $primary;
+    width: 50%;
+    z-index: -1;
+    border-radius: 100px;
+    border: 2px solid white;
+    &.move-right {
+      left: 50%;
     }
+  }
+}
+.tag-button-parent {
+  button {
+    padding: 0;
+    @util size(20px);
+    border-radius: 50%;
+    & + button {
+      margin-left: 15px;
+    }
+  }
+}
+.rangeslider__handle:focus {
+  outline: 0;
+}
+.rangeslider-horizontal .rangeslider__handle:after {
+  content: '';
+  background-color: transparent;
+  box-shadow: none;
+}
+.rangeslider-horizontal {
+  height: 6px;
+  .rangeslider__fill {
+    background-color: $primary;
+  }
+}
+.custom-labels .rangeslider-horizontal .rangeslider__handle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }

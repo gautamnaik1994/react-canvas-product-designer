@@ -21,14 +21,15 @@ class CreateBasicShapes extends Component {
   }
   render() {
     return (
-      <div>
-        <p className="white-color bold half-rem-mb">BASIC</p>
-        <div className="icon-btn-container">
-          <button className="button is-primary" onClick={() => { this.handleClick('rectangle'); }} > <i className="fa fa-square-o" /> </button>
-          <button className="button is-primary" onClick={() => { this.handleClick('circle'); }} > <i className="fa fa-circle-thin" /></button>
-          <button className="button is-primary" onClick={() => { this.toggleTextInputModal(); }} > <i className="fa fa-font" /></button>
-        </div>
+      <div className="column">
         <TextInputModal show={this.state.isOpen} onClose={this.toggleTextInputModal} onSaveChanges={this.handleTextInput} />
+        <div className="icon-btn-container">
+          <button className="button is-primary" onClick={() => { this.handleClick('rectangle'); }} > <i className="icon-square" /> </button>
+          <button className="button is-primary" onClick={() => { this.handleClick('circle'); }} > <i className="icon-circle" /></button>
+          <button className="button is-primary" onClick={() => { this.toggleTextInputModal(); }} > <i className="icon-text" /></button>
+        </div>
+
+
       </div>
     );
   }
