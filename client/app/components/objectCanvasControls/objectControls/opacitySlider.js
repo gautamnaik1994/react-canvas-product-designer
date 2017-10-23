@@ -13,7 +13,7 @@ class OpacitySlider extends Component {
     this.setState({
       opacity: value,
     });
-    //  canvasUtils.changeOpacity(value / 10);
+    canvasUtils.changeOpacity(value / 10);
   };
 
   render() {

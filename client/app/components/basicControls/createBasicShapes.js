@@ -7,29 +7,58 @@ class CreateBasicShapes extends Component {
     super(props);
     this.state = { isOpen: false };
   }
-  handleClick = (shape) => {
+  handleClick = shape => {
     canvasUtils.addShape(shape);
-  }
+  };
   toggleTextInputModal = () => {
     this.setState({
       isOpen: !this.state.isOpen,
     });
-  }
-  handleTextInput = (text) => {
+  };
+  handleTextInput = text => {
     console.log('Text', text);
     canvasUtils.addText(text);
-  }
+  };
   render() {
     return (
       <div className="column">
-        <TextInputModal show={this.state.isOpen} onClose={this.toggleTextInputModal} onSaveChanges={this.handleTextInput} />
+        <TextInputModal
+          show={this.state.isOpen}
+          onClose={this.toggleTextInputModal}
+          onSaveChanges={this.handleTextInput}
+        />
         <div className="icon-btn-container">
-          <button className="button is-primary" onClick={() => { this.handleClick('rectangle'); }} > <i className="icon-square" /> </button>
-          <button className="button is-primary" onClick={() => { this.handleClick('circle'); }} > <i className="icon-circle" /></button>
-          <button className="button is-primary" onClick={() => { this.toggleTextInputModal(); }} > <i className="icon-text" /></button>
+          <button
+            className="button is-primary tooltip"
+            data-tooltip="Add Square"
+            onClick={() => {
+              this.handleClick('rectangle');
+            }}
+          >
+            {' '}
+            <i className="icon-square" />{' '}
+          </button>
+          <button
+            className="button is-primary tooltip"
+            data-tooltip="Add Circle"
+            onClick={() => {
+              this.handleClick('circle');
+            }}
+          >
+            {' '}
+            <i className="icon-circle" />
+          </button>
+          <button
+            className="button is-primary tooltip"
+            data-tooltip="Add Text"
+            onClick={() => {
+              this.toggleTextInputModal();
+            }}
+          >
+            {' '}
+            <i className="icon-text" />
+          </button>
         </div>
-
-
       </div>
     );
   }

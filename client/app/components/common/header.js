@@ -12,6 +12,7 @@ const Header = () => (
     <div className="navbar-end">
       <a
         target="_blank"
+        rel="noreferrer noopener"
         href="https://github.com/gautamnaik1994/react-canvas-product-designer"
         className="navbar-item"
       >
