@@ -8,7 +8,6 @@ import UploadImage from './uploadImage';
 const BasicControlsContainer = () => (
   <div className="basic-controls-container columns">
     <CreateBasicShapes />
-    <CreateClippingMask />
     <DisplayPreview />
     <GenerateImages />
     <UploadImage />

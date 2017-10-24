@@ -5,7 +5,7 @@
 @import './icon.scss';
 @import './helpers.scss';
 
-$canvasControlContainerSize: 860px;
+$canvasControlContainerSize: 700px;
 $commomBorderColor: #d8d8d8;
 $sideBarwidth: 300px;
 $smallfont: 0.75rem;
@@ -39,20 +39,20 @@ $smallfont: 0.75rem;
   border-radius: 3px;
 }
 .object-canvas-controls-container {
-  @util position(fixed, 0 0 0 null);
+  //@util position(fixed, 0 0 0 null);
   border-left: 1px solid $commomBorderColor;
   padding: 15px;
   padding-top: $navbar-height + 1rem;
-  width: $sideBarwidth;
+ // width: $sideBarwidth;
   background-color: white;
 }
 
 .layer-controls-container {
-  @util position(fixed, 0 null 0 0);
+ // @util position(fixed, 0 null 0 0);
   border-right: 1px solid $commomBorderColor;
   padding: 15px;
   padding-top: $navbar-height + 1rem;
-  width: $sideBarwidth;
+ // width: $sideBarwidth;
   background-color: white;
 }
 

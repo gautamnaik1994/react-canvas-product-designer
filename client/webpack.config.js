@@ -36,7 +36,7 @@ if (isProd) {
   };
 } else {
   entryPoint = {
-    app: ['react-hot-loader/patch', 'webpack-dev-server/client?http://localhost:8080', 'webpack/hot/only-dev-server', './index.js'],
+    app: ['react-hot-loader/patch', 'webpack-dev-server/client?http://localhost:3000', 'webpack/hot/only-dev-server', './index.js'],
   };
   outputFileName = '[name].[hash].js';
   cssLoader = {
@@ -179,6 +179,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     hot: true,
     historyApiFallback: true,
+     port:3000,
     // proxy: {
     //   '/auth/google': 'http://localhost:5000',
     // },

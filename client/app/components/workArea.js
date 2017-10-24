@@ -5,11 +5,17 @@ import ObjectCanvasControlsContainer from './objectCanvasControls/objectCanvasCo
 import LayerControlsContainer from './layerControls/layerContainer';
 
 const WorkArea = () => (
-  <div className="workarea">
-    <Canvas />
-    <ObjectCanvasControlsContainer />
-    <BasicControlsContainer />
-    <LayerControlsContainer />
+  <div className="workarea columns">
+    <div className="column is-2">
+      <LayerControlsContainer />
+    </div>
+    <div className="column">
+      <Canvas />
+      <BasicControlsContainer />
+    </div>
+    <div className="column is-2">
+      <ObjectCanvasControlsContainer />
+    </div>
   </div>
 );
 export default WorkArea;

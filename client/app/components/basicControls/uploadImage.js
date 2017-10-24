@@ -6,7 +6,7 @@ class UploadImage extends Component {
     super(props);
     this.state = { file: '', imagePreviewUrl: '' };
   }
-  handleImageChange = e => {
+  handleImageChange = (e) => {
     console.log('Imahe');
     e.preventDefault();
     const reader = new FileReader();
@@ -33,9 +33,9 @@ class UploadImage extends Component {
               name="resume"
               onChange={this.handleImageChange}
             />
-            <span className="file-cta">
-              <span className="file-label">UPLOAD IMAGE</span>
-            </span>
+            <div className="file-cta is-fullwidth">
+              <div className="file-label has-text-centered ">UPLOAD</div>
+            </div>
           </label>
         </div>
       </div>
