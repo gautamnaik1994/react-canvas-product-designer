@@ -10,6 +10,7 @@ $commomBorderColor: #d8d8d8;
 $sideBarwidth: 300px;
 $smallfont: 0.75rem;
 
+
 .navbar {
   @util position(fixed, 0 0 null 0);
   width: 100%;
@@ -18,7 +19,9 @@ $smallfont: 0.75rem;
     height: 100%;
   }
 }
-
+.workarea{
+  height: 100vh;
+}
 .canvas-container {
   border: 1px solid $commomBorderColor;
   margin: 20px auto;
@@ -42,18 +45,20 @@ $smallfont: 0.75rem;
   //@util position(fixed, 0 0 0 null);
   border-left: 1px solid $commomBorderColor;
   padding: 15px;
-  padding-top: $navbar-height + 1rem;
- // width: $sideBarwidth;
+  // padding-top: $navbar-height + 1rem;
+  width: $sideBarwidth;
   background-color: white;
+  height: calc(100vh - #{$navbar-height});
 }
 
 .layer-controls-container {
  // @util position(fixed, 0 null 0 0);
   border-right: 1px solid $commomBorderColor;
   padding: 15px;
-  padding-top: $navbar-height + 1rem;
- // width: $sideBarwidth;
+  // padding-top: $navbar-height + 1rem;
+  width: $sideBarwidth;
   background-color: white;
+  height: calc(100vh - #{$navbar-height});
 }
 
 .icon-btn-container {
@@ -85,6 +90,7 @@ $smallfont: 0.75rem;
     text-decoration: none;
     color: #333;
     cursor: pointer;
+    z-index: 1;
   }
   .mover {
     transition: all 0.3s ease-in-out;
@@ -97,6 +103,7 @@ $smallfont: 0.75rem;
     z-index: -1;
     border-radius: 100px;
     border: 2px solid white;
+    z-index: 0;
     &.move-right {
       left: 50%;
     }
@@ -131,4 +138,23 @@ $smallfont: 0.75rem;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+}
+.swatch{
+  border: 1px solid $commomBorderColor;
+  height: 30px;
+  background-color: tomato;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.popover {
+  position: absolute;
+  z-index: 2;
+}
+.cover {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }

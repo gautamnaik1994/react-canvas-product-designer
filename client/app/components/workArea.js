@@ -6,14 +6,14 @@ import LayerControlsContainer from './layerControls/layerContainer';
 
 const WorkArea = () => (
   <div className="workarea columns">
-    <div className="column is-2">
+    <div className="column is-narrow">
       <LayerControlsContainer />
     </div>
     <div className="column">
       <Canvas />
       <BasicControlsContainer />
     </div>
-    <div className="column is-2">
+    <div className="column is-narrow">
       <ObjectCanvasControlsContainer />
     </div>
   </div>
