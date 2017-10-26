@@ -15,15 +15,15 @@ class ColorPicker extends Component {
     canvasUtils.changeColor(color.hex);
   };
 
-  handleSwatchClick() {
+  handleSwatchClick = () => {
     console.log('dsfjsld');
     this.setState({ displayColorPicker: !this.state.displayColorPicker });
   }
-  renderColorPicker() {
+  renderColorPicker = () => {
     if (this.state.displayColorPicker) {
       return (
         <div className="popover">
-          <div className="cover" onClick={this.handleClose} />
+          <div className="cover" onClick={this.handleSwatchClick} />
           <ChromePicker color={this.state.color} onChange={this.handleChangeComplete} />
         </div>
       );
@@ -36,8 +36,8 @@ class ColorPicker extends Component {
         <label htmlFor="objectName" className="label is-small">
           COLOR
         </label>
-        <div className="swatch" onClick={this.handleSwatchClick} styles={`background-color:${this.state.color}`} />
-        {this.renderColorPicker}
+        <div className="swatch" onClick={this.handleSwatchClick} style={{ backgroundColor: `${this.state.color}` }} />
+        {this.renderColorPicker()}
         {/* <ChromePicker
           disableAlpha
           className="is-shadowless is-fullwidth"
