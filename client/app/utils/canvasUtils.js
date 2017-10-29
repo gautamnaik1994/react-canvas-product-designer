@@ -72,3 +72,16 @@ export function changeOpacity(opacity) {
   return 0;
 }
 
+export function addImage(dataURL) {
+  fabric.Image.fromURL(dataURL, (img) => {
+    // img.setWidth(canvas.getWidth());
+    canvas.add(img);
+    canvas.renderAll();
+  });
+}
+export function generateImage() {
+  window.open(canvas.toDataURL({
+    format: 'png',
+  }));
+}
+

@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import * as canvasUtils from 'canvasUtils';
 
 class GenerateImages extends Component {
-  constructor(props) {
-    super(props);
-  }
-  handleClick = (shape) => {
-    canvasUtils.addShape(shape);
+  handleClick = () => {
+    canvasUtils.generateImage();
   }
 
   render() {
     return (
       <div className="column">
-        <button className="button is-primary is-fullwidth" onClick={() => { this.handleClick('rectangle'); }} > GENERATE </button>
+        <button className="button is-primary is-fullwidth" onClick={this.handleClick}> GENERATE </button>
       </div>
     );
   }

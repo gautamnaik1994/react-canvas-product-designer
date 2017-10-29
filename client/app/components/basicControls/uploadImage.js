@@ -16,7 +16,8 @@ class UploadImage extends Component {
         file,
         imagePreviewUrl: reader.result,
       });
-      console.log(this.state.imagePreviewUrl);
+      // console.log(this.state.imagePreviewUrl);
+      canvasUtils.addImage(this.state.imagePreviewUrl);
     };
     reader.readAsDataURL(file);
   };

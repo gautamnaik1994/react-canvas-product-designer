@@ -3,11 +3,14 @@ import { ChromePicker } from 'react-color';
 import * as canvasUtils from 'canvasUtils';
 
 class ColorPicker extends Component {
+  static defaultProps = {
+    color: '#f00',
+  };
   constructor(props) {
     super(props);
     this.state = {
       displayColorPicker: false,
-      color: '#f00',
+      color: this.props.color,
     };
   }
   handleChangeComplete = (color) => {
@@ -38,12 +41,6 @@ class ColorPicker extends Component {
         </label>
         <div className="swatch" onClick={this.handleSwatchClick} style={{ backgroundColor: `${this.state.color}` }} />
         {this.renderColorPicker()}
-        {/* <ChromePicker
-          disableAlpha
-          className="is-shadowless is-fullwidth"
-          color={this.state.color}
-          onChangeComplete={this.handleChangeComplete}
-        /> */}
       </div>
     );
   }

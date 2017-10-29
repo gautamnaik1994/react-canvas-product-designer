@@ -9,7 +9,7 @@ const ObjectControlsContainer = () => (
     <NameInput />
     <TagColor />
     <ColorPicker />
-    <OpacitySlider />
+    <OpacitySlider opacity={1} />
   </div>
 );
 

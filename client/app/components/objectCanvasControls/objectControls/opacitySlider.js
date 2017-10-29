@@ -1,15 +1,22 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 import Slider from 'react-rangeslider';
 import * as canvasUtils from 'canvasUtils';
 
 class OpacitySlider extends Component {
+  static defaultProps = {
+    opacity: 1,
+  };
+  // static propTypes = {
+  //   opacity: PropTypes.number,
+  // };
+
   constructor(props) {
     super(props);
     this.state = {
-      opacity: 1,
+      opacity: this.props.opacity,
     };
   }
-  onSliderChange = value => {
+  onSliderChange = (value) => {
     this.setState({
       opacity: value,
     });
@@ -29,15 +36,6 @@ class OpacitySlider extends Component {
           value={this.state.opacity}
           onChange={this.onSliderChange}
         />
-        {/* <input
-          className="slider is-fullwidth is-circle"
-          step="0.1"
-          min="0"
-          max="1"
-          value={this.state.opacity}
-          type="range"
-          onChange={this.onSliderChange}
-        /> */}
       </div>
     );
   }

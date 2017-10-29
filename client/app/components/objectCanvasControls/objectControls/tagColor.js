@@ -21,13 +21,6 @@ const TagColor = () => (
         '#00bcd4',
       ]}
     />
-    {/* <div className="tag-button-parent half-rem-mt">
-      <button className="button is-primary " />
-      <button className="button is-link " />
-      <button className="button is-info " />
-      <button className="button is-success " />
-      <button className="button is-warning " />
-    </div> */}
   </div>
 );
 export default TagColor;
