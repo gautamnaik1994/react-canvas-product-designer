@@ -9,7 +9,8 @@ import Router from './routes';
 // import reducers from './reducers/';
 import ConfigureStore from './store';
 
-const reduxStore = ConfigureStore();
+export const reduxStore = ConfigureStore();
+
 
 const render = (Component) => {
   ReactDOM.render(

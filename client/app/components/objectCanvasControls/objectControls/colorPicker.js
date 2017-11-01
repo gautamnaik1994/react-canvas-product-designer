@@ -13,6 +13,9 @@ class ColorPicker extends Component {
       color: this.props.color,
     };
   }
+  componentWillReceiveProps(nextProps) {
+    this.setState({ color: nextProps.color });
+  }
   handleChangeComplete = (color) => {
     this.setState({ color: color.hex });
     canvasUtils.changeColor(color.hex);
@@ -33,6 +36,7 @@ class ColorPicker extends Component {
     }
     return null;
   }
+
   render() {
     return (
       <div className="one-rem-mb">

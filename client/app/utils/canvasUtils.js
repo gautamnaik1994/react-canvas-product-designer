@@ -1,9 +1,11 @@
 import { fabric } from 'fabric';
+import * as actions from '../actions/index';
 
 let canvas = null;
 
 export function initializeCanvas() {
   canvas = window._canvas = new fabric.Canvas('mockup_canvas');
+  canvas.on('object:selected', actions.getCurrentOjectInfo);
 }
 
 export function getCanvasInstance() {
@@ -30,6 +32,7 @@ export function addShape(shape) {
           left: 50,
           top: 50,
           fill: '#00d1b2',
+          opacity: 0.5,
         }),
       );
       break;

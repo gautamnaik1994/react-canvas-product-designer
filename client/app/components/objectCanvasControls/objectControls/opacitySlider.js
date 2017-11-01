@@ -16,6 +16,9 @@ class OpacitySlider extends Component {
       opacity: this.props.opacity,
     };
   }
+  componentWillReceiveProps(nextProps) {
+    this.setState({ opacity: (nextProps.opacity * 10) });
+  }
   onSliderChange = (value) => {
     this.setState({
       opacity: value,
