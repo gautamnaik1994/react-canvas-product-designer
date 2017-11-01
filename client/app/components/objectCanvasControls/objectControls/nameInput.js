@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class NameInput extends Component {
   static defaultProps = {
-    name: `Object ${(Math.random() * 100) + 1}`,
+    name: '',
   };
   render() {
     return (

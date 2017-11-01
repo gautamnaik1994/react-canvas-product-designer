@@ -8,7 +8,7 @@ export function getCurrentOjectInfo(selectedObject) {
     type: CURRENT_OBJECT,
     payload: {
       opacity: selectedObject.target.opacity,
-      name: 'Test name',
+      name: selectedObject.target.name,
       fill: selectedObject.target.fill,
     },
   });

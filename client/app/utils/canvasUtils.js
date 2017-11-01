@@ -1,4 +1,5 @@
 import { fabric } from 'fabric';
+import uniqid from 'uniqid';
 import * as actions from '../actions/index';
 
 let canvas = null;
@@ -32,7 +33,10 @@ export function addShape(shape) {
           left: 50,
           top: 50,
           fill: '#00d1b2',
-          opacity: 0.5,
+          opacity: 1,
+          id: uniqid('rect-'),
+          name: 'Rectangle',
+          tagColor: '#00d1b2',
         }),
       );
       break;
@@ -44,6 +48,10 @@ export function addShape(shape) {
           left: 50,
           top: 50,
           fill: '#00d1b2',
+          opacity: 1,
+          id: uniqid('circ-'),
+          name: 'Circle',
+          tagColor: '#00d1b2',
         }),
       );
       break;
