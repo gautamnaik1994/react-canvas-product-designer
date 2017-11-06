@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
+
+const PORT = 3000;
+
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -179,7 +182,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     hot: true,
     historyApiFallback: true,
-     port:3000,
+    port: PORT,
     // proxy: {
     //   '/auth/google': 'http://localhost:5000',
     // },

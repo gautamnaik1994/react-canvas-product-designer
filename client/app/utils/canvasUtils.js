@@ -21,6 +21,12 @@ export function setCanvasSize(width = 500, height = 500) {
   canvas.setWidth(width);
   canvas.setHeight(height);
 }
+export function changeObjectName(name) {
+  if (canvas.getActiveObject() != null) {
+    canvas.getActiveObject().set('name', name);
+  }
+  return 0;
+}
 
 export function addShape(shape) {
   console.log('Got executed', 'FFFFFFF');

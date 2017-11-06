@@ -1,9 +1,9 @@
 import { CURRENT_OBJECT } from '../actions/types';
 
 const INITIAL_STATE = {
-  fill: 'red',
-  name: 'Stringgg',
-  opacity: 0.5,
+  fill: '',
+  name: '',
+  opacity: 1,
 };
 
 export default function (state = INITIAL_STATE, action) {

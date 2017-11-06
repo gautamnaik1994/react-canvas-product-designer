@@ -10,6 +10,8 @@ export function getCurrentOjectInfo(selectedObject) {
       opacity: selectedObject.target.opacity,
       name: selectedObject.target.name,
       fill: selectedObject.target.fill,
+      id: selectedObject.target.id,
+      tagColor: selectedObject.target.tagColor,
     },
   });
   console.log('payload', selectedObject.target.opacity);

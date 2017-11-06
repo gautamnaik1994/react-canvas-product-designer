@@ -38,12 +38,13 @@ class ColorPicker extends Component {
   }
 
   render() {
+    const color = this.state.color;
     return (
       <div className="one-rem-mb">
         <label htmlFor="objectName" className="label is-small">
           COLOR
         </label>
-        <div className="swatch" onClick={this.handleSwatchClick} style={{ backgroundColor: `${this.state.color}` }} />
+        <div className="swatch" title={color} onClick={this.handleSwatchClick} style={{ backgroundColor: `${color}` }} />
         {this.renderColorPicker()}
       </div>
     );
