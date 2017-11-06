@@ -6,7 +6,7 @@ import GenerateImages from './generateImages';
 import UploadImage from './uploadImage';
 
 const BasicControlsContainer = () => (
-  <div className="basic-controls-container columns">
+  <div className="basic-controls-container columns ">
     <CreateBasicShapes />
     <DisplayPreview />
     <GenerateImages />

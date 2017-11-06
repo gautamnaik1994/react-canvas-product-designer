@@ -6,6 +6,10 @@ class ColorPicker extends Component {
   static defaultProps = {
     color: '#f00',
   };
+  // static propTypes = {
+  //   color: PropTypes.string,
+  // };
+
   constructor(props) {
     super(props);
     this.state = {

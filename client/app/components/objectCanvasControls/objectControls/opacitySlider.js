@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-rangeslider';
 import * as canvasUtils from 'canvasUtils';
 
@@ -6,9 +7,6 @@ class OpacitySlider extends Component {
   static defaultProps = {
     opacity: 1,
   };
-  // static propTypes = {
-  //   opacity: PropTypes.number,
-  // };
 
   constructor(props) {
     super(props);
@@ -45,3 +43,7 @@ class OpacitySlider extends Component {
 }
 
 export default OpacitySlider;
+
+OpacitySlider.propTypes = {
+  opacity: PropTypes.number,
+};

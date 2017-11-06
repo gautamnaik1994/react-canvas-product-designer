@@ -32,11 +32,13 @@ $smallfont: 0.75rem;
 }
 
 .basic-controls-container {
-  position: fixed;
+  position: absolute;
+  left: 10px;
+  right: 10px;
   bottom: 70px;
-  width: $canvasControlContainerSize;
+  //width: $canvasControlContainerSize;
   background-color: white;
-  left: calc((100vw - #{$canvasControlContainerSize}) / 2);
+  //left: calc((100vw - #{$canvasControlContainerSize}) / 2);
   padding: 4px;
   box-shadow: 0 4px 17px 1px rgba(0, 0, 0, 0.15);
   border-radius: 3px;

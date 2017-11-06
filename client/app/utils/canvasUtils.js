@@ -97,8 +97,8 @@ export function addImage(dataURL) {
   });
 }
 export function generateImage() {
-  window.open(canvas.toDataURL({
+  return canvas.toDataURL({
     format: 'png',
-  }));
+  });
 }
 

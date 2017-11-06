@@ -7,7 +7,7 @@ class CreateBasicShapes extends Component {
     super(props);
     this.state = { isOpen: false };
   }
-  handleClick = shape => {
+  handleClick = (shape) => {
     canvasUtils.addShape(shape);
   };
   toggleTextInputModal = () => {
@@ -15,7 +15,7 @@ class CreateBasicShapes extends Component {
       isOpen: !this.state.isOpen,
     });
   };
-  handleTextInput = text => {
+  handleTextInput = (text) => {
     console.log('Text', text);
     canvasUtils.addText(text);
   };

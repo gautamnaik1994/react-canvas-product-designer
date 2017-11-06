@@ -7,9 +7,7 @@ import NameInput from './nameInput';
 import TagColor from './tagColor';
 
 
-const ObjectControlsContainer = (props) => {
-  console.log('Fill ', props.currentObject.opacity);
-  return (
+const ObjectControlsContainer = (props) => (
     <div className="object-controls-container">
       <NameInput name={props.currentObject.name} />
       <TagColor />
@@ -17,7 +15,6 @@ const ObjectControlsContainer = (props) => {
       <OpacitySlider opacity={props.currentObject.opacity} />
     </div>
   );
-};
 
 function mapStateToProps(state) {
   return {

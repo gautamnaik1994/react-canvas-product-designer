@@ -5,7 +5,7 @@ const ImageModal = (props) => {
   if (props.show) {
     activeClass = 'is-active';
   }
-  handleOnClick = () => {
+  const handleOnClick = () => {
     console.log('dowload');
   };
 
@@ -21,14 +21,14 @@ const ImageModal = (props) => {
             onClick={props.onClose}
           />
         </header>
-        <section className="modal-card-body">
+        <section className="modal-card-body has-text-centered">
           <img src={props.src} alt="" />
         </section>
-        <footer className="modal-card-foot">
-          <button className="button is-success" onClick={this.handleOnClick}>
+        <footer className="modal-card-foot justify-flex-end">
+          <a href={props.src} download="CanvasGeneratedImage" className="button is-success " >
             Download
-          </button>
-          <button className="button">Cancel</button>
+          </a>
+          <button className="button ">Cancel</button>
         </footer>
       </div>
     </div>
