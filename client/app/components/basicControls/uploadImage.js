@@ -35,7 +35,7 @@ class UploadImage extends Component {
               onChange={this.handleImageChange}
             />
             <div className="file-cta is-fullwidth">
-              <div className="file-label has-text-centered ">UPLOAD</div>
+              <div className="file-label justify-flex-center">UPLOAD</div>
             </div>
           </label>
         </div>
