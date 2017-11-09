@@ -43,6 +43,8 @@ export function addShape(shape) {
           id: uniqid('rect-'),
           name: 'Rectangle',
           tagColor: '#00d1b2',
+          flipX: false,
+          flipY: false,
         }),
       );
       break;
@@ -58,6 +60,8 @@ export function addShape(shape) {
           id: uniqid('circ-'),
           name: 'Circle',
           tagColor: '#00d1b2',
+          flipX: false,
+          flipY: false,
         }),
       );
       break;
@@ -102,3 +106,52 @@ export function generateImage() {
   });
 }
 
+export function sendObjectBackwards() {
+  if (canvas.getActiveObject() != null) {
+    canvas.sendBackwards(canvas.getActiveObject());
+    canvas.deactivateAll().renderAll();
+  }
+  return 0;
+}
+
+export function sendObjectForwards() {
+  if (canvas.getActiveObject() != null) {
+    canvas.bringForward(canvas.getActiveObject());
+    canvas.deactivateAll().renderAll();
+  }
+}
+export function bringObjectFront() {
+  if (canvas.getActiveObject() != null) {
+    canvas.bringToFront(canvas.getActiveObject());
+    canvas.deactivateAll().renderAll();
+  }
+  return 0;
+}
+
+export function sendObjectBack() {
+  if (canvas.getActiveObject() != null) {
+    canvas.sendToBack(canvas.getActiveObject());
+    canvas.deactivateAll().renderAll();
+  }
+  return 0;
+}
+
+export function rotateObject(value) {
+  const activeObject = canvas.getActiveObject();
+  if (activeObject != null) {
+    canvas.getActiveObject().rotate(activeObject.getAngle() + value);
+    canvas.renderAll();
+  }
+}
+export function flipObject(direction) {
+  const activeObject = canvas.getActiveObject();
+  console.log('activeObject.flipY', activeObject.flipY);
+  if (activeObject != null) {
+    if (direction === 'X') {
+      activeObject.flipX = !activeObject.flipX;
+    }
+  } else {
+    activeObject.flipY = !activeObject.flipY;
+  }
+  canvas.renderAll();
+}

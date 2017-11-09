@@ -12,7 +12,9 @@ const WorkArea = () => (
       <LayerControlsContainer />
     </div>
     <div className="column relative">
-      <Canvas />
+      <div>
+        <Canvas />
+      </div>
       <BasicControlsContainer />
     </div>
     <div className="column is-narrow">

@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bulma": "^0.6.0",
+    "bulma": "^0.6.1",
     "bulma-tooltip": "0.0.4",
     "fabric": "^1.7.19",
     "prop-types": "^15.6.0",
